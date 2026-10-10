@@ -1,0 +1,162 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow | Task Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2 class="logo">✦ TaskFlow</h2>
+
+            <p class="menu-title">WORKSPACE</p>
+
+            <button class="menu-item active" data-filter="all">
+                ▦ &nbsp; All Tasks
+            </button>
+
+            <button class="menu-item" data-filter="pending">
+                ◷ &nbsp; Pending Tasks
+            </button>
+
+            <button class="menu-item" data-filter="completed">
+                ✓ &nbsp; Completed Tasks
+            </button>
+
+            <div class="sidebar-bottom">
+                <div class="profile-icon">S</div>
+                <div>
+                    <h4>My Workspace</h4>
+                    <p>Personal Planner</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <p class="welcome">YOUR PERSONAL WORKSPACE</p>
+                    <h1>Task Dashboard</h1>
+                    <p class="subtitle">
+                        Organize your work. Achieve your goals.
+                    </p>
+                </div>
+
+                <div class="date-box" id="todayDate"></div>
+            </header>
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card purple">
+                    <span>Total Tasks</span>
+                    <h2 id="totalTasks">0</h2>
+                    <p>All your tasks</p>
+                </div>
+
+                <div class="stat-card orange">
+                    <span>Pending</span>
+                    <h2 id="pendingTasks">0</h2>
+                    <p>Tasks to complete</p>
+                </div>
+
+                <div class="stat-card green">
+                    <span>Completed</span>
+                    <h2 id="completedTasks">0</h2>
+                    <p>Goals achieved</p>
+                </div>
+
+            </section>
+
+            <!-- Progress -->
+            <section class="progress-card">
+                <div class="progress-heading">
+                    <div>
+                        <h3>Your Progress</h3>
+                        <p>Keep moving towards your goals!</p>
+                    </div>
+
+                    <h2 id="progressText">0%</h2>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </section>
+
+            <!-- Add Task -->
+            <section class="task-panel">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Manage Your Tasks</h2>
+                        <p>Add, organize and complete your daily work.</p>
+                    </div>
+                </div>
+
+                <form id="taskForm" class="task-form">
+
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="What do you need to do?"
+                        maxlength="120"
+                        required
+                    >
+
+                    <select id="priorityInput">
+                        <option value="Medium">Medium Priority</option>
+                        <option value="High">High Priority</option>
+                        <option value="Low">Low Priority</option>
+                    </select>
+
+                    <button type="submit" id="submitButton">
+                        + Add Task
+                    </button>
+
+                </form>
+
+                <!-- Search -->
+                <div class="task-toolbar">
+                    <input
+                        type="search"
+                        id="searchInput"
+                        placeholder="🔍 Search tasks..."
+                    >
+
+                    <span id="taskCount">0 tasks</span>
+                </div>
+
+                <!-- Task List -->
+                <div id="taskList" class="task-list"></div>
+
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">✦</div>
+                    <h3>No tasks found</h3>
+                    <p>Add a task to get your day started!</p>
+                </div>
+
+            </section>
+
+            <footer>
+                <p>Made with ♥ by You | TaskFlow © 2026</p>
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
